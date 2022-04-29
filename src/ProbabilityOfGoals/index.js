@@ -1,4 +1,5 @@
 import React, {useState, useEffect}  from "react";
+import './probabilityOfGoals.css';
 
 function ProbabilityOfGoals(){
     const [localLeague, setLocalLeague] = useState('');
@@ -29,9 +30,9 @@ function ProbabilityOfGoals(){
     });
     
     return(
-        <div className="Goals">
+        <div className="goals">
             <h1>Goles esperados en el partido</h1>
-            <div>
+            <div className="goalsLeague">
                 <p>Promedio de goles en la liga</p>
                 <label>Local</label>
                 <input
@@ -45,7 +46,7 @@ function ProbabilityOfGoals(){
                 type="number">
                 </input>
             </div>
-            <div>
+            <div className="goalsLocal">
                 <p>Promedio de goles del local</p>
                 <label>A favor</label>
                 <input
@@ -59,7 +60,7 @@ function ProbabilityOfGoals(){
                 type="number">
                 </input>
             </div>
-            <div>
+            <div className="goalsVisit">
                 <p>Promedio de goles del visitante</p>
                 <label>A favor</label>
                 <input
@@ -73,7 +74,7 @@ function ProbabilityOfGoals(){
                 type="number">
                 </input>
             </div>
-            <div>
+            <div className="goalsResult">
                 <p>Goles esperados local:</p>
                 <p id="local"> </p>
                 <p>Goles esperados visita:</p>
